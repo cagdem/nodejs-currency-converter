@@ -215,7 +215,7 @@ class CurrencyConverter {
                 .then(($) => {return $(".iBp4i").text().split(" ")[0]})
                 .then((rates) => {
                     if(rates.includes(","))
-                        rates = rates.replace(",", "")
+                        rates = rates.replace(",", ".")
                     return parseFloat(rates)
             })
     }
